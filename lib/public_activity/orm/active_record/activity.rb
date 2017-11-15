@@ -9,6 +9,7 @@ module PublicActivity
 
         # Define polymorphic association to the parent
         belongs_to :trackable, :polymorphic => true
+        belongs_to :Festival, class_name: '::Festival'
 
         case ::ActiveRecord::VERSION::MAJOR
         when 3..4
